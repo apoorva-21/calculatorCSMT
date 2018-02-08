@@ -3,26 +3,7 @@ package calculatorLogic;
 import java.math.BigDecimal;
 import java.util.Stack;
 
-public class BusinessLogic implements CalculatorInterface {
-
-	public <T extends Number> double add(T a, T b) {
-		return a.doubleValue() + b.doubleValue();
-	}
-	
-	//	method to subtract two numbers
-	public <T extends Number> double sub(T a,	T b) {
-    	return a.doubleValue() - b.doubleValue();
-    }
-    
-    //    method to multiply two numbers
-	public <T extends Number> double mul(T a,	T b) {
-    	return a.doubleValue() * b.doubleValue();
-    }
-    
-    //    method to divide two numbers
-	public <T extends Number> double div(T a,	T b) {
-    	return a.doubleValue() / b.doubleValue();
-    }
+public class BusinessLogic {
 
 	public String solve(String input) {
 		char[] tokens = input.toCharArray();
@@ -83,18 +64,18 @@ public class BusinessLogic implements CalculatorInterface {
 	}
 	  
 	public Double applyOp(char op,  Double b, Double a) {
-	    switch (op) {
-	      	case '+':
-	      		return add(a,b);  // calling the business class 
-	      	case '-':
-	      		return sub(a, b);
-	      	case '*':
-	      		return mul(a, b);
-	      	case '/':
-	      		if (b == 0)
-	      			throw new UnsupportedOperationException("Cannot divide by zero");
-	      		return div(a, b);
-	    }
+//	    switch (op) {
+//	      	case '+':
+//	      		return add(a,b);  // calling the business class 
+//	      	case '-':
+//	      		return sub(a, b);
+//	      	case '*':
+//	      		return mul(a, b);
+//	      	case '/':
+//	      		if (b == 0)
+//	      			throw new UnsupportedOperationException("Cannot divide by zero");
+//	      		return div(a, b);
+//	    }
 	    return 0.00;
 	}
 }

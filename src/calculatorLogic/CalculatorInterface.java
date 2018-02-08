@@ -1,21 +1,16 @@
 package calculatorLogic;
+import operands.Matrix;
+import operands.Operand;
 
 public interface CalculatorInterface {
-	//finds sum
-	public <T extends Number> double add(T a, T b);
+	public <T extends Number> Operand add(Operand a, 	Operand b) throws Exception;
 	
-    //finds difference
-	public <T extends Number> double sub(T a,	T b);
+//	finds difference
+	public <T extends Number> Operand sub(Operand a,	Operand b) throws Exception;
     
-	//finds product
-	public <T extends Number> double mul(T a,	T b);
-    
-	//finds quotient
-	public <T extends Number> double div(T a,	T b);
+//	finds product
+	public <T extends Number> Operand mul(Operand a,	Operand b) throws Exception;
 	
-	//accepts and solves the infix expression
-	public String solve(String input);
-	
-	//applies the operator to the operands passed as arguments
-	public Double applyOp(char op,  Double b, Double a);
+//	finds quotient
+	public <T extends Number> Operand div(Operand a,	Operand b) throws Exception;
 }
